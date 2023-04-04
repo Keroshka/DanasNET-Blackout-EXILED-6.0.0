@@ -12,7 +12,7 @@ namespace DanasNET_Blackout
     {
         public override string Author { get; } = "Keroshka";
         public override string Name { get; } = "DanasDotNET-Blackout";
-        public override Version Version { get; } = new Version(1, 0, 0);
+        public override Version Version { get; } = new Version(1, 0, 1);
 
         public override Version RequiredExiledVersion { get; } = new Version(6, 0, 0);
 
