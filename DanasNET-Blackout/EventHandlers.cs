@@ -43,7 +43,6 @@ namespace DanasNET_Blackout
 
         private void Blackout()//pitch_0.30 .G5 pitch_0.20 .g3 jam_025_9 pitch_0.10 .G1
         {
-            Exiled.API.Features.Cassie.Message("pitch_0.30 .G5 pitch_0.20 .g3 jam_025_9 pitch_0.10 .G1");
             switch (_plugin.rng.Next(3))
             {
                 case 0:
