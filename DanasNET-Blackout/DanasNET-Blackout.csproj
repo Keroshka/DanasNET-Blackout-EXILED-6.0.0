@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\..\Desktop\scpdog\plugstuff\Master\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp-Publicized">
       <HintPath>..\..\..\..\..\Desktop\scpdog\plugstuff\Master\Assembly-CSharp-Publicized.dll</HintPath>
     </Reference>

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Exiled.Events;
 
 namespace DanasNET_Blackout
 {
@@ -23,11 +24,22 @@ namespace DanasNET_Blackout
 
         public override void OnEnabled()
         {
+            EventHandler = new EventHandlers(Instance);
+
+            Exiled.Events.Handlers.Server.RoundStarted += EventHandler.OnRoundStarted;
+            Exiled.Events.Handlers.Player.TriggeringTesla += EventHandler.OnTeslaTrigger;
+
             base.OnEnabled();
         }
 
         public override void OnDisabled()
         {
+            Exiled.Events.Handlers.Server.RoundStarted -= EventHandler.OnRoundStarted;
+            Exiled.Events.Handlers.Player.TriggeringTesla -= EventHandler.OnTeslaTrigger;
+
+            EventHandler = null;
+            Instance = null;
+
             base.OnDisabled();
         }
     }
