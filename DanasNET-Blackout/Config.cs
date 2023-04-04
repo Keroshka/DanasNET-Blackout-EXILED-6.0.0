@@ -15,6 +15,6 @@ namespace DanasNET_Blackout
         public int MaxTimeCooldown { get; set; } = 360;
         public int MinBlackoutTime { get; set; } = 20;
         public int MaxBlackoutTime { get; set; } = 40;
-        public int BlackoutChance { get; set; } = 100;
+        public int BlackoutChance { get; set; } = 40;
     }
 }
