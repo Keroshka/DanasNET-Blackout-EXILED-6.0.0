@@ -11,5 +11,7 @@ namespace DanasNET_Blackout
     {
         public bool IsEnabled { get; set; } = true;
         public bool Debug { get; set; }
+        public int minTime { get; set; } = 120;
+        public int maxTime { get; set; } = 360;
     }
 }
