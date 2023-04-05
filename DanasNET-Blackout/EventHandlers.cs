@@ -37,7 +37,7 @@ namespace DanasNET_Blackout
         public IEnumerator<float> EnableTeslas()
         {
             yield return Timing.WaitForSeconds(BlackoutTime);
-            Exiled.API.Features.Cassie.Message("jam_025_9 POWER SYSTEM jam_025_9 OPERATIONAL");
+            Exiled.API.Features.Cassie.Message("jam_025_9 POWER SYSTEM .G1 jam_025_9 .G3 pitch_0.85 OPERATIONAL");
             AreTeslasEnabled = true;
         }
 
