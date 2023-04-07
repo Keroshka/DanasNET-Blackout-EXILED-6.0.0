@@ -59,6 +59,15 @@ namespace DanasNET_Blackout
                     break;
             }
             Exiled.API.Features.Map.TurnOffAllLights(BlackoutTime);
+
+            int roomCount = _plugin.rng.Next(1, 5);
+            Exiled.API.Features.Room room;
+            for (int i = 0; i < roomCount; i++)
+            {
+                room = Exiled.API.Features.Room.Random();
+                room.LockDown(5, Exiled.API.Enums.DoorLockType.Lockdown079);
+            }
+            
             AreTeslasEnabled = false;
             Timing.RunCoroutine(EnableTeslas());
         }
