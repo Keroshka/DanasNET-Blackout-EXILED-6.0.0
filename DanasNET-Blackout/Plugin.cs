@@ -28,6 +28,7 @@ namespace DanasNET_Blackout
 
             Exiled.Events.Handlers.Server.RoundStarted += EventHandler.OnRoundStarted;
             Exiled.Events.Handlers.Player.TriggeringTesla += EventHandler.OnTeslaTrigger;
+            Exiled.Events.Handlers.Server.RoundEnded += EventHandler.OnRoundEnd;
 
             base.OnEnabled();
         }
@@ -36,6 +37,7 @@ namespace DanasNET_Blackout
         {
             Exiled.Events.Handlers.Server.RoundStarted -= EventHandler.OnRoundStarted;
             Exiled.Events.Handlers.Player.TriggeringTesla -= EventHandler.OnTeslaTrigger;
+            Exiled.Events.Handlers.Server.RoundEnded -= EventHandler.OnRoundEnd;
 
             EventHandler = null;
             Instance = null;

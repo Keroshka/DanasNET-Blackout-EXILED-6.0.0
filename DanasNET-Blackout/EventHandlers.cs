@@ -15,7 +15,6 @@ namespace DanasNET_Blackout
         public EventHandlers(Plugin plugin)
         {
             _plugin = plugin;
-            ResetCooldown();
         }
 
         private void ResetCooldown()
@@ -76,7 +75,8 @@ namespace DanasNET_Blackout
         {
             if (_plugin.rng.Next(100) <= _plugin.Config.BlackoutChance)
             {
-                Timing.RunCoroutine(BlackoutTimeout());
+                ResetCooldown();
+                Timing.RunCoroutine(BlackoutTimeout(), "routine");
             }
         }
 
@@ -86,6 +86,11 @@ namespace DanasNET_Blackout
             {
                 ev.IsAllowed = false;
             }
+        }
+
+        public void OnRoundEnd(Exiled.Events.EventArgs.Server.RoundEndedEventArgs ev)
+        {
+            Timing.KillCoroutines("routine");
         }
     }
 }

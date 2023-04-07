@@ -11,10 +11,10 @@ namespace DanasNET_Blackout
     {
         public bool IsEnabled { get; set; } = true;
         public bool Debug { get; set; }
-        public int MinTimeCooldown { get; set; } = 120;
-        public int MaxTimeCooldown { get; set; } = 360;
-        public int MinBlackoutTime { get; set; } = 20;
-        public int MaxBlackoutTime { get; set; } = 40;
-        public int BlackoutChance { get; set; } = 40;
+        public int MinTimeCooldown { get; set; } = 240;
+        public int MaxTimeCooldown { get; set; } = 420;
+        public int MinBlackoutTime { get; set; } = 30;
+        public int MaxBlackoutTime { get; set; } = 60;
+        public int BlackoutChance { get; set; } = 50;
     }
 }
